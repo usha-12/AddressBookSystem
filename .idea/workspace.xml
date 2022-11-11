@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e6a62bb-1ef5-4b31-96ad-567efc9bbf79" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/brideglabz/addressbooksystem/AddressBook.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/brideglabz/addressbooksystem/AddressBookMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/brideglabz/addressbooksystem/Contact.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/brideglabz/addressbooksystem/AddressBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/brideglabz/addressbooksystem/AddressBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/brideglabz/addressbooksystem/AddressBookMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/brideglabz/addressbooksystem/AddressBookMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/brideglabz/addressbooksystem/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/brideglabz/addressbooksystem/Contact.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +40,26 @@
     "RunOnceActivity.ShowReadmeOnStart": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="AddressBookMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.brideglabz.addressbooksystem.AddressBookMain" />
+      <module name="AddressBookSystemCollection" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.brideglabz.addressbooksystem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.AddressBookMain" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
