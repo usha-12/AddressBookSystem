@@ -51,24 +51,19 @@ public class AddressBookMain {
             person++;
         }
     }
-    public void sortingByName() {
-        list = list.stream().sorted(Comparator.comparing(Contact::getFirstName)).collect(Collectors.toList());
+    public void sortingByCity() {
+        list = list.stream().sorted(Comparator.comparing(Contact::getCity)).collect(Collectors.toList());
         list.forEach(i -> System.out.println(i));
     }
     public static void main(String[] args) {
          AddressBookMain addressBookMain = new AddressBookMain();
          System.out.println("Welcome to Address Book Program..");
          addPerson();
-         addressBookMain.sortingByName();
+         addressBookMain.sortingByCity();
          System.out.println(list);
 
     }
 }
-/*Ability to sort the entries in the
-address book alphabetically by
-Person’s name
-- Use Console to sort person details by name
-- Use Collection Library for Sorting
-- Override toString method to finally Print Person Entry in
-Concole
-- Use Java Streams*/
+/*Ability to sort the entries in
+the address book by City,
+State, or Zip - Write functions to sort person by City, State or Zip - Use Collection Library for Sorting - Use Java Streams*/
