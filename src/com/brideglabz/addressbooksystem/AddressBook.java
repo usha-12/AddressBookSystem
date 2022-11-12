@@ -1,52 +1,90 @@
 package com.brideglabz.addressbooksystem;
-
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Scanner;
 public class AddressBook {
-    List<Contact> list = new LinkedList<>();
-    static Scanner sc = new Scanner(System.in);
-    public void addContact() {
-        System.out.println("Enter your firstName : ");
-        String firstName = sc.next();
-        System.out.println("Enter your lastName : ");
-        String lastName = sc.next();
-        System.out.println("Enter your address : ");
-        String address = sc.next();
-        System.out.println("Enter your city : ");
-        String city = sc.next();
-        System.out.println("Enter your state : ");
-        String state = sc.next();
-        System.out.println("Enter your zipCode : ");
-        String zip = sc.next();
-        System.out.println("Enter your phoneNo : ");
-        String phoneNo = sc.next();
-        System.out.println("Enter your emailId : ");
-        String email = sc.next();
-        Contact contact = new Contact();
-        contact.setFirstName(firstName);
-        contact.setEmail(email);
-        contact.setAddress(address);
-        contact.setCity(city);
-        contact.setLastName(lastName);
-        contact.setState(state);
-        contact.setZip(zip);
-        contact.setPhoneNo(phoneNo);
-        list.add(contact);
-    }
-    public void addNewContact(){
-        System.out.println("-----------Enter New Contact---------");
-        int newContact = 1;
-        while (newContact == 1){
-            addContact();
-            newContact--;
-        }
-        System.out.println(list);
-    }
-    public void printAddressBook(){
-        for (Contact contact: list){
-            System.out.println(contact);
-        }
+    private String firstName;
+    private String lastName;
+    private String address;
+    private String city;
+    private String state;
+    private String zip;
+    private String phoneNo;
+    private String email;
+
+
+    public String getFirstName() {
+        return firstName;
     }
 
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public String getZip() {
+        return zip;
+    }
+
+    public void setZip(String zip) {
+        this.zip = zip;
+    }
+
+    public String getPhoneNo() {
+        return phoneNo;
+    }
+
+    public void setPhoneNo(String phoneNo) {
+        this.phoneNo = phoneNo;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    @Override
+    public String toString() {
+        return '{'+
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", address='" + address + '\'' +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                ", zip='" + zip + '\'' +
+                ", phoneNo='" + phoneNo + '\'' +
+                ", email='" + email + '\'' +
+                '}';
+    }
 }
