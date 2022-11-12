@@ -1,5 +1,5 @@
 package com.brideglabz.addressbooksystem;
-public class AddressBook {
+public class Contact {
     private String firstName;
     private String lastName;
     private String address;
