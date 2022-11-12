@@ -50,16 +50,29 @@ public class AddressBookMain {
         }
         sc.close();
     }
+    public static void deleteContact() {
+        System.out.println("------------------------Delete a person using person's name------------------------------------");
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter first name : ");
+        String firstName = sc.nextLine();
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i).getFirstName().equalsIgnoreCase(firstName)) {
+                list.remove(i);
+            } else {
+                System.out.println("No data found");
+            }
+        }
+        sc.close();
+    }
 
     public static void main(String[] args) {
         AddressBookMain addressBookMain = new AddressBookMain();
         System.out.println("Welcome to Address Book Program..");
         addContact();
-        editContact();
+        deleteContact();
         System.out.println(list);
     }
 }
-/*Ability to edit
-existing contact
-person using their
-name*/
+/*Ability to delete a
+person using
+person's name - Use Console to delete a person*/
