@@ -50,28 +50,33 @@ public class AddressBookMain {
             person++;
         }
     }
-    public void viewByCity() {
-        System.out.println("----------view Persons by City or State---------------");
+    public void countBasedOnCity() {
+        int count = 0;
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter city name");
+        System.out.println("Enter city name : ");
         String city = sc.nextLine();
         sc.close();
         for (AddressBook list : list) {
-            if (list.getCity().equals(city))
+            if (list.getCity().equals(city)) {
+                count++;
                 System.out.println(list);
+
+            }
         }
+        System.out.println("TotalNo : " + count);
     }
     public static void main(String[] args) {
         AddressBookMain addressBookMain = new AddressBookMain();
         System.out.println("Welcome to Address Book Program..");
         addPerson();
-       addressBookMain.viewByCity();
+       addressBookMain.countBasedOnCity();
         System.out.println(list);
 
     }
 }
-/*Ability to view Persons
-by City or State - Maintain Dictionary of City and Person as
-well as State and Person
-- Use Collection Library to maintain
-Dictionary using java api*/
+/*Ability to get number
+of contact persons i.e.
+count by City or State
+- Search Result will show count by city and by
+state
+- Use Java Streams*/
