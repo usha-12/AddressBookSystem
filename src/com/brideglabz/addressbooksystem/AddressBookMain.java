@@ -1,9 +1,10 @@
 package com.brideglabz.addressbooksystem;
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class AddressBookMain {
     static Scanner sc = new Scanner(System.in);
-    static List<AddressBook> list = new ArrayList<AddressBook>();
+    static List<Contact> list = new ArrayList<Contact>();
     public static void addContact() {
         System.out.println("Enter your firstName : ");
         String firstName = sc.nextLine();
@@ -28,7 +29,7 @@ public class AddressBookMain {
         String phoneNo = sc.nextLine();
         System.out.println("Enter your emailId : ");
         String email = sc.nextLine();
-        AddressBook addressBook = new AddressBook();
+        Contact addressBook = new Contact();
         addressBook.setFirstName(firstName);
         addressBook.setEmail(email);
         addressBook.setAddress(address);
@@ -50,33 +51,24 @@ public class AddressBookMain {
             person++;
         }
     }
-    public void countBasedOnCity() {
-        int count = 0;
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter city name : ");
-        String city = sc.nextLine();
-        sc.close();
-        for (AddressBook list : list) {
-            if (list.getCity().equals(city)) {
-                count++;
-                System.out.println(list);
-
-            }
-        }
-        System.out.println("TotalNo : " + count);
+    public void sortingByName() {
+        list = list.stream().sorted(Comparator.comparing(Contact::getFirstName)).collect(Collectors.toList());
+        list.forEach(i -> System.out.println(i));
     }
     public static void main(String[] args) {
-        AddressBookMain addressBookMain = new AddressBookMain();
-        System.out.println("Welcome to Address Book Program..");
-        addPerson();
-       addressBookMain.countBasedOnCity();
-        System.out.println(list);
+         AddressBookMain addressBookMain = new AddressBookMain();
+         System.out.println("Welcome to Address Book Program..");
+         addPerson();
+         addressBookMain.sortingByName();
+         System.out.println(list);
 
     }
 }
-/*Ability to get number
-of contact persons i.e.
-count by City or State
-- Search Result will show count by city and by
-state
+/*Ability to sort the entries in the
+address book alphabetically by
+Person’s name
+- Use Console to sort person details by name
+- Use Collection Library for Sorting
+- Override toString method to finally Print Person Entry in
+Concole
 - Use Java Streams*/
