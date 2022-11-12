@@ -34,7 +34,19 @@ public class AddressBook {
         contact.setPhoneNo(phoneNo);
         list.add(contact);
     }
-    public void printAddressBook(){
+    public void addNewContact(){
+        System.out.println("-----------Enter New Contact---------");
+        int newContact = 1;
+        while (newContact == 1){
+            addContact();
+            newContact--;
+        }
         System.out.println(list);
     }
+    public void printAddressBook(){
+        for (Contact contact: list){
+            System.out.println(contact);
+        }
+    }
+
 }
