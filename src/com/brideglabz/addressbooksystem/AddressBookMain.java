@@ -50,7 +50,8 @@ public class AddressBookMain {
             person++;
         }
     }
-    public void searchByCity() {
+    public void viewByCity() {
+        System.out.println("----------view Persons by City or State---------------");
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter city name");
         String city = sc.nextLine();
@@ -64,17 +65,13 @@ public class AddressBookMain {
         AddressBookMain addressBookMain = new AddressBookMain();
         System.out.println("Welcome to Address Book Program..");
         addPerson();
-       addressBookMain.searchByCity();
+       addressBookMain.viewByCity();
         System.out.println(list);
 
     }
 }
-/*Ability to search Person
-in a City or State across
-the multiple
-AddressBook - Search Result can show multiple person in
-the city or state
-
-UC 8
-
-- Use Java Streams*/
+/*Ability to view Persons
+by City or State - Maintain Dictionary of City and Person as
+well as State and Person
+- Use Collection Library to maintain
+Dictionary using java api*/
