@@ -6,7 +6,6 @@ import java.util.Scanner;
 public class AddressBookMain {
    static Scanner sc = new Scanner(System.in);
     static List<AddressBook> list = new ArrayList<AddressBook>();
-
     public static void addContact() {
         System.out.println("Enter your firstName : ");
         String firstName = sc.next();
@@ -64,15 +63,28 @@ public class AddressBookMain {
         }
         sc.close();
     }
+    public static void addMultiplePerson() {
+        System.out.println("-----------add multiple person to Address Book-----------------");
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter how many contact you want to add : ");
+        int noOfAddressBook = sc.nextInt();
+        int person = 1;
+        while (person <= noOfAddressBook) {
+            addContact();
+            person++;
+        }
+    }
 
     public static void main(String[] args) {
         AddressBookMain addressBookMain = new AddressBookMain();
         System.out.println("Welcome to Address Book Program..");
         addContact();
-        deleteContact();
+        addMultiplePerson();
         System.out.println(list);
     }
 }
-/*Ability to delete a
-person using
-person's name - Use Console to delete a person*/
+/*Ability to add multiple
+person to Address Book
+- Use Console to add person details one at a time
+- Use Collection Class to maintain multiple
+contact persons in Address Book*/
